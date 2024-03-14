@@ -58,7 +58,7 @@ runs:
 
         EXCLUDE_GLOB=""
         if [ -n "${{ inputs.exclude-glob }}" ]; then
-          EXCLUDE_GLOB="-exclude-glob='${{ inputs.exclude-glob }}'"
+          EXCLUDE_GLOB="-exclude-glob=${{ inputs.exclude-glob }}"
         fi
 
         if [ -n "${{ inputs.working.directory }}" ]; then
